@@ -1,11 +1,10 @@
 
 .top-navigation {
-    display : flex;
-    
-    background-color: aquamarine;
+    display : flex;   
+    background-color: #b6b6b6;
 }
 .top-navigation__name {
     text-transform: uppercase;
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 20px;
 }
