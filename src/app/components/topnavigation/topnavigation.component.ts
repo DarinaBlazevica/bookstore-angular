@@ -9,13 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TopnavigationComponent implements OnInit {
 
   @Input() bookstore_name: string;
-  @Input() cart: any;
-  @Input() hamburger: any;
+  @Input() cart: string;
+  @Input() hamburger: string;
 
   constructor() {
-    this.bookstore_name =''
-    this.cart = ''
-    this.hamburger=''
+    this.bookstore_name ='Bookstore'
+    this.cart = 'assets/svg/shopping-cart.svg'
+    this.hamburger='assets/svg/hamburger_menu.svg'
   }
       
   ngOnInit(): void {

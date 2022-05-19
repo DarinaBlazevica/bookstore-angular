@@ -1,12 +1,12 @@
 <nav class="top-navigation">
-  <div class="top-navigation__header-block">
-    <h1 class="top-navigation__name">{{ bookstore_name }}</h1>
+  <div routerLink = "/main"  class="top-navigation__header-block">
+    <div class="top-navigation__name">{{ bookstore_name | uppercase }}</div>
   </div>
   <div class="top-navigation__cart-block">
-    <img class="top-navigation__cart" src="{{ cart }}" alt="shopping cart" />
+    <img class="top-navigation__cart" src={{cart}} alt="shopping cart" />
     <img
       class="top-navigation__hamburger"
-      src="{{ hamburger }}"
+      src={{hamburger}}
       alt="hamburger"
     />
   </div>
