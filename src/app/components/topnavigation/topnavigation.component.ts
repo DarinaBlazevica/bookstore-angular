@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-topnavigation',
@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TopnavigationComponent implements OnInit {
 
-  @Input() bookstore_name: string;
-  @Input() cart: string;
-  @Input() hamburger: string;
+  public bookstore_name: string;
+  public cart: string;
+  public hamburger: string;
 
   constructor() {
     this.bookstore_name ='Bookstore'
