@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/books';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-main-page',

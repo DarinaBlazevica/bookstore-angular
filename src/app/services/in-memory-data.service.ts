@@ -11,5 +11,4 @@ export class InMemoryDataService implements InMemoryDbService{
     const books = data.books;
     return {books};
   }
-  constructor() { }
 }
