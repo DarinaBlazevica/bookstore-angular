@@ -1,2 +1,11 @@
-<p>Main Page</p>
-<p>Another PR will be created for this part, do not worry</p>
+<div class="main_page">
+  <ul class="product_list">
+    <li #bookItems class="product_list__item" *ngFor="let book of books" routerLink="/bookDetails/{{book.title}}">
+      <img class="product_list__book_cover" src="{{ book.book_cover }}" alt="book" />
+      <div class="product_list__textbox">
+        <p class="product_list__book_title">{{ book.title | slice:0:50 }}{{ book.title.length > 50 ? '...' : '' }}</p>
+        <p>{{ book.price | currency }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

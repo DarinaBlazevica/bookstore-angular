@@ -1,0 +1,58 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Anna Karenina",
+      "price": 33,
+      "book_cover": "assets/books_img/tolstoy.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Crime and Punishment",
+      "price": 25,
+      "book_cover": "assets/books_img/dostoyevsky.jpg"
+    },
+    {
+      "id": 3,
+      "title": "The Master and Margarita",
+      "price": 21,
+      "book_cover": "assets/books_img/bulgakov.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Brave New World",
+      "price": 23,
+      "book_cover": "assets/books_img/huxley.jpg"
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "price": 19,
+      "book_cover": "assets/books_img/orwell.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Time to Live and Time to Die",
+      "price": 25,
+      "book_cover": "assets/books_img/remarque.jpg"
+    },
+    {
+      "id": 7,
+      "title": "The Picture of Dorian Gray",
+      "price": 19,
+      "book_cover": "assets/books_img/wilde.jpg"
+    },
+    {
+      "id": 8,
+      "title": "War and Peace",
+      "price": 21,
+      "book_cover": "assets/books_img/tolstoy_wandp.jpg"
+    },
+    {
+      "id": 9,
+      "title": "We",
+      "price": 22,
+      "book_cover": "assets/books_img/zamyatin.jpg"
+    }  
+  ]
+}
