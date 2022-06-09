@@ -1,15 +1,17 @@
 .top-navigation {
+    top:0;
     display: flex;
-    position: relative;
-    background-color: #dfdfdf;
+    width: 100%;
+    position: fixed;
+    background-color: #fdefd6;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px 10px 10px;
 }
 
 .top-navigation__header-block {
     display: flex;
-    padding: 0;
+    padding:  10px 10px 10px 10px;
+
 }
 
 .top-navigation__name {
@@ -22,7 +24,6 @@
 .top-navigation__cart {
     width: 25px;
     height: 20px;
-    padding-left: 10px;
 }
 
 .top-navigation__hamburger {
@@ -31,7 +32,9 @@
 }
 
 .top-navigation__cart-block {
+    padding:  10px 10px 10px 10px;
     display: flex;
+    position: relative;
     align-items: center;
     gap: 15px;
 }
