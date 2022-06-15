@@ -1,7 +1,7 @@
 <div class="main_page">
   <ul class="product_list">
     <li #bookItems class="product_list__item" *ngFor="let book of books">
-      <a routerLink="/bookDetails/{{book.id}}">
+      <a routerLink="/books/{{book.id}}">
         <img class="product_list__book_cover" src="{{ book.book_cover }}" alt="book" />
         <div class="product_list__textbox">
           <h1 class="product_list__book_title">{{ book.title | slice:0:50 }}{{ book.title.length > 50 ? '...' : '' }}

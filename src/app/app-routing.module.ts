@@ -10,7 +10,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'bookDetails/:id',
+    path: 'books/:id',
     loadChildren: () =>
       import('./components/book-details/book-details.module').then(
         (m) => m.BookDetailsModule

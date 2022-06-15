@@ -3,7 +3,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 55px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 .book_details__description {
@@ -22,7 +22,7 @@
 }
 
 .book_details__add_to_cart p {
-    padding: 10px 25px 10px 10px
+    padding: 10px 25px 10px 10px;
 }
 
 #bookAmount {
