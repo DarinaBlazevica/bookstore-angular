@@ -1,4 +1,16 @@
-<div>
-    <h1>Title</h1>
-    <p>Will be implemented in another PR</p>
+<div class="book_details__container" *ngIf="book">
+    <h1 class="title">{{book.title}}</h1>
+    <div class="book_details__image-container">
+        <img src="{{ book.book_cover }}" alt="book">
+    </div>
+    <p class="book_details__description">{{book.description}}</p>
+    <div class="book_details__add_to_cart">
+        <div class="book_details__book_amount">
+            <label for="book">Amount: </label>
+            <input type="number" id="bookAmount" placeholder="0" />
+        </div>
+        <p>{{book.price | currency}}</p>
+    </div>
+    <button class="book_details__addToCartBtn" type="button" (click)="showDialog = !showDialog">Add to Cart</button>
+    <app-dialogbox [(opened)]="showDialog"></app-dialogbox>
 </div>

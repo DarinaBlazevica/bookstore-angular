@@ -1,7 +1,52 @@
-input[type=number]::-webkit-inner-spin-button {
-    cursor: pointer;
+.book_details__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 55px;
+    padding: 10px 10px 10px 10px;
 }
 
-div {
-    margin-top: 55px;
+.book_details__description {
+    font-size: 15px;
+}
+
+.book_details__image-container img {
+    width: 100%;
+}
+
+.book_details__add_to_cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book_details__add_to_cart p {
+    padding: 10px 25px 10px 10px
+}
+
+#bookAmount {
+    width: 50px;
+}
+
+.book_details__book_amount {
+    display: flex;
+    flex-direction: column;
+    font-family: Calibri;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.book_details__book_amount input::-webkit-inner-spin-button {
+    width: 15px;
+    height: 20px;
+    opacity: 1;
+}
+
+.book_details__addToCartBtn {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: #fff9ef;
 }
