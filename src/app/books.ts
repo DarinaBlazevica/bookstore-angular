@@ -3,4 +3,5 @@ export interface Book {
     title: string;
     price: number;
     book_cover: string;
+    description: string;
 }

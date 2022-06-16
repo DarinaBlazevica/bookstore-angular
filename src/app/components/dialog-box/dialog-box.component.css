@@ -1,0 +1,40 @@
+.dialogBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #fff;
+    padding: 20px 10px 30px 10px;
+    border: #000 1px solid;
+    z-index: 2;
+    position: fixed;
+    right: 15px;
+    left: 15px;
+    top: 25%;
+    height: 200px;
+    background-color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+
+.dialogBox button {
+    background-color: #fff9ef;
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid black;
+}
+
+.closeBtn {
+    margin: 0 0 0 90%;
+    width: 20px;
+    height: 25px;
+}
