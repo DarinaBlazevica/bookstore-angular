@@ -2,7 +2,7 @@
   <nav class="top-navigation">
     <div routerLink="/main" class="top-navigation__header-block">
       <div routerLink="/cart" routerLinkActive="active" #rla="routerLinkActive">
-        <img class="top-navigation__backBtn" *ngIf="rla.isActive" src="{{backBtn}}" alt="backBtn" (click)="goBack()" />
+        <img class="top-navigation__backButton" *ngIf="rla.isActive" src="{{backBtn}}" alt="backButton" (click)="goBack()" />
       </div>
       <div class="top-navigation__name">{{ bookstore_name | uppercase }}</div>
     </div>

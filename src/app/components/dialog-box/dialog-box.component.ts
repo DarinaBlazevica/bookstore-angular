@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./dialog-box.component.css'],
 })
 export class DialogBoxComponent {
-  //@Input() closed = true;
+  
   @Input() opened!: boolean;
   @Output() openedChange = new EventEmitter<boolean>();
   

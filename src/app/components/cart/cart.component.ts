@@ -28,11 +28,6 @@ export class CartComponent implements OnInit {
     this.cartService.removeItem(index);
   }
 
-  // clearCart() {
-  //   this.items = [];
-  //   return this.items;
-  // }
-
   calculateTotalPrice() {
     let totalElementPrice = 0;
     this.items.forEach((element) => {
