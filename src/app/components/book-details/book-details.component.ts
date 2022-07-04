@@ -36,6 +36,5 @@ export class BookDetailsComponent implements OnInit {
 
   addToCart(book: Book) {
     this.cartService.addToCart(book);
-    window.alert('Your product has been added to the cart!');
   }
 }

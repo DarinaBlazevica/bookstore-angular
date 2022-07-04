@@ -10,7 +10,15 @@ export class CartService {
   constructor() {}
 
   addToCart(book: Book) {
-    this.items.push(book);
+    const existsInCart = this.items.find(
+      (item) => JSON.stringify(item) === JSON.stringify(book)
+    );
+    if (existsInCart) {
+      window.alert('This book is already added to cart');
+    } else {
+      this.items.push(book);
+      window.alert('Book is added to cart');
+    }
   }
 
   removeItem(index: number) {
