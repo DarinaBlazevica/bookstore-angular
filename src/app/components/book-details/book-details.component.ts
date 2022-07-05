@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/app/books';
 import { BookService } from 'src/app/services/book.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-book-details',
@@ -9,7 +10,10 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
+  
   book: Book | undefined;
+
+  public items = this.cartService.getItems();
 
   public toCart!: string;
   public continueShopping!: string;
@@ -17,7 +21,8 @@ export class BookDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -27,5 +32,9 @@ export class BookDetailsComponent implements OnInit {
   getBook(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.bookService.getBook(id).subscribe((book) => (this.book = book));
+  }
+
+  addToCart(book: Book) {
+    this.cartService.addToCart(book);
   }
 }

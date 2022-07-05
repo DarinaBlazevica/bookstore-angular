@@ -1,10 +1,13 @@
 <header>
   <nav class="top-navigation">
     <div routerLink="/main" class="top-navigation__header-block">
+      <div routerLink="/cart" routerLinkActive="active" #rla="routerLinkActive">
+        <img class="top-navigation__backButton" *ngIf="rla.isActive" src="{{backButton}}" alt="backButton" (click)="goBack()" />
+      </div>
       <div class="top-navigation__name">{{ bookstore_name | uppercase }}</div>
     </div>
     <div class="top-navigation__cart-block">
-      <img class="top-navigation__cart" src={{cart}} alt="shopping cart" />
+      <img class="top-navigation__cart" routerLink="/cart" src={{cart}} alt="shopping cart" />
       <img class="top-navigation__hamburger" src={{hamburger}} alt="hamburger" />
     </div>
   </nav>

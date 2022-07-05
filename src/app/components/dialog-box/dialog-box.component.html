@@ -1,5 +1,5 @@
 <div *ngIf="opened" class="dialogBox">
-    <img class="closeBtn" src="../../../assets/svg/xmark-solid.svg" alt="closeBtn" *ngIf="opened"
+    <img class="closeButton" src="../../../assets/svg/xmark-solid.svg" alt="closeButton" *ngIf="opened"
         (click)="toggleDialogBox()">
     <button routerLink="/cart">{{ toCart }}</button>
     <button *ngIf="opened" (click)="toggleDialogBox()">{{ continueShop }}</button>

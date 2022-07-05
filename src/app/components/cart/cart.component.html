@@ -1,1 +1,30 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <div *ngIf="!items|| items.length === 0">
+        <div class="cart_content__empty">...Cart is Empty...</div>
+    </div>
+
+    <div *ngIf="items && items.length > 0">
+        <div class="cart_content" *ngFor="let item of items; let i = index">
+            <div class="cart_item">
+                <img class="cart_item__book_cover" src={{item.book_cover}} alt="book">
+                <section class="cart_item__text">
+                    <span class="cart_item__title">{{ item.title }}</span>
+                    <span class="cart_item__price">{{ item.price | currency }}</span>
+                </section>
+                <section class="cart_item__right">
+                    <img class="cart_item__closeButton" src="../../../assets/svg/xmark-solid.svg" (click)="removeItem(i)"
+                        alt="close">
+                    <div class="cart__book_amount">
+                        <input type="number" class="cart__bookAmount" min="1" max="10" [(ngModel)]="item.qty" />
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="total_cost__container">
+            <div class="total_cost">
+                <h1>Total cost: {{ calculateTotalPrice() | currency }}</h1>
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
