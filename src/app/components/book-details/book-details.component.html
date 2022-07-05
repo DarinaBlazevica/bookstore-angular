@@ -11,6 +11,6 @@
         </div>
         <p>{{ book.price | currency }}</p>
     </div>
-    <button class="book_details__addToCartBtn" type="button" (click)="showDialog = !showDialog" (click)="addToCart(book)">Add to Cart</button>
+    <button class="book_details__addToCartButton" type="button" (click)="showDialog = !showDialog" (click)="addToCart(book)">Add to Cart</button>
     <app-dialogbox [(opened)]="showDialog"></app-dialogbox>
 </div>
