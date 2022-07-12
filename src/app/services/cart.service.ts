@@ -1,23 +1,30 @@
 import { Injectable } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Route, Router } from '@angular/router';
 import { Book } from 'src/app/books';
+import { DialogBoxComponent } from '../components/dialog-box/dialog-box.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  items: Book[] = [];
+  
+  public items: Book[] = [];
 
   constructor() {}
 
   addToCart(book: Book) {
-    const existsInCart = this.items.find(
-      (item) => JSON.stringify(item) === JSON.stringify(book)
-    );
-    if (existsInCart) {
-      window.alert('This book is already added to cart');
-    } else {
+    let existsInCart = false;
+
+    for (let i in this.items) {
+      if (this.items[i].id === book.id) {
+        this.items[i].qty += book.qty;
+        existsInCart = true;
+      }
+    }
+
+    if (!existsInCart) {
       this.items.push(book);
-      window.alert('Book is added to cart');
     }
   }
 
@@ -26,6 +33,11 @@ export class CartService {
   }
 
   getItems() {
+    return this.items;
+  }
+
+  clearCart() {
+    this.items = [];
     return this.items;
   }
 }

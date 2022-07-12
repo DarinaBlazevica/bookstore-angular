@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
 
   public totalPrice!: number;
   public quantity!: number;
-  public isCartOpened!: boolean;
+  public showCheckoutForm = false;
 
   constructor(private cartService: CartService) {}
 

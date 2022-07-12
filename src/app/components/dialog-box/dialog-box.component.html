@@ -1,7 +1,5 @@
-<div *ngIf="opened" class="dialogBox">
-    <img class="closeButton" src="../../../assets/svg/xmark-solid.svg" alt="closeButton" *ngIf="opened"
-        (click)="toggleDialogBox()">
-    <button routerLink="/cart">{{ toCart }}</button>
-    <button *ngIf="opened" (click)="toggleDialogBox()">{{ continueShop }}</button>
+<div mat-dialog-container class="dialogBox">
+    <img (click)="continueShopping()" class="closeButton" src="../../../assets/svg/xmark-solid.svg"/>
+    <button (click)="goToCart()">{{data.toCart}}</button>
+    <button (click)="continueShopping()">{{data.continueShopping}}</button>
 </div>
-<div *ngIf="opened" class="overlay" (click)="toggleDialogBox()"></div>

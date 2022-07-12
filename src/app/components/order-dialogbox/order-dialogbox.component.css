@@ -1,0 +1,13 @@
+.orderForm__heading {
+    font-size: 20px;
+    text-align: center;
+}
+
+.orderForm__goToHomepageButton {
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: #000;
+}

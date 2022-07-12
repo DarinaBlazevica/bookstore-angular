@@ -39,17 +39,11 @@
 
 .cart-container button {
    width: 100%;
-   margin-top: 52px;
+   margin-top: 35px;
    font-size: 20px;
    padding: 10px;
    border: none;
    background-color: #fff9ef;
-}
-
-.cart-container button:hover {
-   background-color: #808080;
-   opacity: 0.5;
-   color: #000;
 }
 
 .cart_item {

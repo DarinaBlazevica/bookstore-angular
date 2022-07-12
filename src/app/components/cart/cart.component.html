@@ -23,7 +23,8 @@
         <div class="total_cost__container">
             <div class="total_cost">
                 <h1>Total cost: {{ calculateTotalPrice() | currency }}</h1>
-                <button>Checkout</button>
+                <button type="button" (click)="showCheckoutForm = !showCheckoutForm">Checkout</button>
+                <app-checkout [(showCheckout)] ="showCheckoutForm"></app-checkout>
             </div>
         </div>
     </div>

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/app/books';
 import { BookService } from 'src/app/services/book.service';
 import { CartService } from 'src/app/services/cart.service';
+import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-book-details',
@@ -15,14 +17,11 @@ export class BookDetailsComponent implements OnInit {
 
   public items = this.cartService.getItems();
 
-  public toCart!: string;
-  public continueShopping!: string;
-  public showDialog = false;
-
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService,
-    private cartService: CartService
+    private cartService: CartService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -36,5 +35,12 @@ export class BookDetailsComponent implements OnInit {
 
   addToCart(book: Book) {
     this.cartService.addToCart(book);
+  }
+
+  toggleCartDialog(book: Book) {
+    this.addToCart(book);
+    this.dialog.open(DialogBoxComponent, {
+      data: {toCart: "Go to Cart" , continueShopping: "Continue shopping"},
+    })
   }
 }

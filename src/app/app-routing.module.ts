@@ -21,7 +21,7 @@ const routes: Routes = [
       path: 'cart',
       loadChildren: () => import('./components/cart/cart.module').then((m) => m.CartModule),
     },
-  
+ 
     { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
 
