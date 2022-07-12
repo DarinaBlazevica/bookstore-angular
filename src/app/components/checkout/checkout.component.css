@@ -3,12 +3,11 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .checkout_container__user_information {
     display: flex;
-    flex-grow: wrap;
+    margin-top: 10px;
 }
 
 .checkout_container__user_information--confirm_email {
@@ -41,8 +40,8 @@
 }
 
 .error {
+    flex-grow: 2;
     font-size: 10px;
-    display: block;
     color:#d42424;
     border: solid 1px #d42424;
     padding: 5px;

@@ -9,8 +9,6 @@
             <div *ngIf="userData['user_email'].errors?.['required']">Email required</div>
             <div *ngIf="userData['user_email'].errors?.['pattern']">Provide valid email address</div>
         </div>
-    </form>
-    <form [formGroup]="checkoutOrderForm">
         <div class="checkout_container__user_information">
             <label class="checkout_container__user_information--confirm_email">confirm email:</label>
             <input type="email" name="confirm_email" formControlName="confirm_email">
@@ -21,8 +19,6 @@
             <div *ngIf="userData['confirm_email'].errors?.['EmailMatch']">Provide valid email address
             </div>
         </div>
-    </form>
-    <form [formGroup]="checkoutOrderForm">
         <div class="checkout_container__user_information">
             <label class="checkout_container__user_information--name">name/surname:</label>
             <input type="text" formControlName="name">
