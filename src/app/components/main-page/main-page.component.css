@@ -8,12 +8,8 @@
 
 .product_list__item {
     list-style-type: none;
-    background-color: #fff9ef;
-    margin-bottom: 15px;
-}
-
-.product_list__item:hover {
     background-color: #f5f5f5;
+    margin-bottom: 15px;
 }
 
 .product_list h1 {

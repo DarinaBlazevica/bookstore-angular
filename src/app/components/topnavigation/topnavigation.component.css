@@ -3,7 +3,7 @@
     display: flex;
     width: 100%;
     position: fixed;
-    background-color: #fdefd6;
+    background-color: #1f1f1f;
     justify-content: space-between;
     align-items: center;
     height: 50px;
@@ -17,6 +17,7 @@
 }
 
 .top-navigation__name {
+    color: #fff;
     font-size: 20px;
     font-family: 'Calibri';
     letter-spacing: 2px;

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialogbox',
@@ -7,14 +9,19 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class DialogBoxComponent {
   
-  @Input() opened!: boolean;
-  @Output() openedChange = new EventEmitter<boolean>();
-  
-  public toCart = 'Go to Cart';
-  public continueShop = 'Continue shopping';
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: { toCart: string; continueShopping: string },
+    private router: Router,
+    public dialogRef: MatDialogRef<DialogBoxComponent>,
+  ) {}
 
-  toggleDialogBox() {
-    this.opened = false;
-    this.openedChange.emit(this.opened);
+  goToCart() {
+      this.router.navigate(['cart']);
+      this.dialogRef.close();
+  }
+
+  continueShopping() {
+    this.dialogRef.close();
   }
 }
+

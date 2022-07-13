@@ -1,40 +1,21 @@
 .dialogBox {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    background-color: #fff;
-    padding: 20px 10px 30px 10px;
-    border: #000 1px solid;
-    z-index: 2;
-    position: fixed;
-    right: 15px;
-    left: 15px;
-    top: 25%;
-    height: 200px;
-    background-color: #fff;
+    gap: 15px;
 }
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    opacity: 0.4;
-    z-index: 1;
-}
-
 
 .dialogBox button {
-    background-color: #fff9ef;
+    background-color: #1f1f1f;
+    color: #fff;
     padding: 10px;
-    font-size: 25px;
-    border: 1px solid black;
+    font-size: 20px;
+    border: none;
 }
 
 .closeButton {
-    margin: 0 0 0 90%;
+    margin-top: calc(100% - 110%);
+    margin-left: 100%;
     width: 20px;
     height: 25px;
 }
