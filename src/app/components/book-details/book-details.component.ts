@@ -12,7 +12,6 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
-  
   book: Book | undefined;
 
   public items = this.cartService.getItems();
@@ -40,7 +39,7 @@ export class BookDetailsComponent implements OnInit {
   toggleCartDialog(book: Book) {
     this.addToCart(book);
     this.dialog.open(DialogBoxComponent, {
-      data: {toCart: "Go to Cart" , continueShopping: "Continue shopping"},
-    })
+      data: { toCart: 'Go to Cart', continueShopping: 'Continue shopping' },
+    });
   }
 }

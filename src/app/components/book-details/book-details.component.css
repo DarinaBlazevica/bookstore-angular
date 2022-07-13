@@ -44,9 +44,10 @@
 }
 
 .book_details__addToCartButton {
+    color: #fff;
     width: 100%;
     border: none;
     font-size: 20px;
     padding: 10px 10px 10px 10px;
-    background-color: #fff9ef;
+    background-color: #1f1f1f;
 }

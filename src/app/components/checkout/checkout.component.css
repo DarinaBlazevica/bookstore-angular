@@ -20,7 +20,7 @@
     border-right: none;
     display: inline-block;
     font-size: 12px;
-    background-color: rgb(224, 224, 224);
+    background-color: #cacaca
 }
 
 .checkout_container__user_information input {

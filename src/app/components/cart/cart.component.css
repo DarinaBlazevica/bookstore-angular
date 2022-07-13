@@ -43,7 +43,8 @@
    font-size: 20px;
    padding: 10px;
    border: none;
-   background-color: #fff9ef;
+   background-color: #1f1f1f;
+   color: #fff;
 }
 
 .cart_item {
