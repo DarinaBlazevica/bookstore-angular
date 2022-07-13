@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent  {
   @Input() showCheckout!: boolean;
   @Output() showCheckoutChange = new EventEmitter<boolean>();
 
@@ -40,8 +40,6 @@ export class CheckoutComponent implements OnInit {
       }
     );
   }
-
-  ngOnInit(): void {}
 
   get userData() {
     return this.checkoutOrderForm.controls;
