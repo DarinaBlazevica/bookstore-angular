@@ -1,15 +1,21 @@
 .main_page {
-    margin-top: 55px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 85%;
     padding: 10px 10px 10px 10px;
 }
 
 .product_list__item {
     list-style-type: none;
     background-color: #f5f5f5;
-    margin-bottom: 15px;
 }
 
 .product_list h1 {
