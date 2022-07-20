@@ -1,5 +1,4 @@
-import { Component, OnInit,} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -23,7 +22,7 @@ export class TopnavigationComponent {
     this.backButton ='assets/svg/caret-left-solid.svg'
   }
 
-  goBack(){
+  goBack(): void {
       this.location.back();
   }
 }

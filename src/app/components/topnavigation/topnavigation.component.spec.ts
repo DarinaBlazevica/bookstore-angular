@@ -1,19 +1,27 @@
-import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Router, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TopnavigationComponent } from './topnavigation.component';
+import { Location } from '@angular/common';
 
 describe('TopnavigationComponent ', () => {
   let component: TopnavigationComponent;
   let fixture: ComponentFixture<TopnavigationComponent>;
-  let location: Location;
+  let location: any;
+  
+  const locationStub = {
+    back: jasmine.createSpy('back')
+  }
+  
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [TopnavigationComponent],
+      providers: [
+        { provide: Location, useValue: locationStub }
+      ]
     }).compileComponents();
+    
   });
 
   beforeEach(() => {
@@ -41,4 +49,10 @@ describe('TopnavigationComponent ', () => {
   it(`should have as Back Button Icon`, () => {
     expect(component.backButton).toContain('caret-left-solid.svg');
   });
+
+  it(`should go back`, () => { 
+    component.goBack();
+    location = fixture.debugElement.injector.get(Location);
+    expect(location.back).toHaveBeenCalled();
+  })
 });
