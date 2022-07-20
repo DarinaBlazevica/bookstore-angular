@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 describe('TopnavigationComponent ', () => {
   let component: TopnavigationComponent;
   let fixture: ComponentFixture<TopnavigationComponent>;
-  let location: any;
+  let location: Location;
   
   const locationStub = {
     back: jasmine.createSpy('back')
