@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/interface/books';
+import { CartItem } from 'src/app/interface/cartItems';
 import { CartService } from 'src/app/services/cart.service';
+import { MessengerService } from 'src/app/services/messenger.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,25 +10,37 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-
-  public items = this.cartService.getItems();
+  public items: any[] = [];
 
   public totalPrice!: number;
   public quantity!: number;
   public showCheckoutForm = false;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private msgService: MessengerService
+  ) {}
 
   ngOnInit(): void {
+    this.handleSubscription();
     this.getItems();
   }
-  
-  getItems(): void {
-    this.items = this.cartService.getItems();
+
+  handleSubscription() {
+    this.msgService.getMsg().subscribe(() => {
+      this.getItems();
+      this.calculateTotalPrice();
+    });
   }
 
-  removeItem(index: number) {
-    this.cartService.removeItem(index);
+  getItems() {
+    this.cartService.getItems().subscribe((cartItems: CartItem[]) => {
+      this.items = cartItems;
+    });
+  }
+  removeItem(cartItem: CartItem): void {
+    this.items = this.items.filter((item) => item !== cartItem);
+    this.cartService.removeItem(cartItem.id).subscribe();
   }
 
   calculateTotalPrice() {

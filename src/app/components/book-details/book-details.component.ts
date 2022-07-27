@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Book } from 'src/app/books';
+import { Book } from 'src/app/interface/books';
 import { BookService } from 'src/app/services/book.service';
 import { CartService } from 'src/app/services/cart.service';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MessengerService } from 'src/app/services/messenger.service';
 
 @Component({
   selector: 'app-book-details',
@@ -12,7 +13,8 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
-  book: Book | undefined;
+  
+  @Input() book!: Book;
 
   public items = this.cartService.getItems();
 
@@ -20,7 +22,8 @@ export class BookDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private bookService: BookService,
     private cartService: CartService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private msgService: MessengerService
   ) {}
 
   ngOnInit(): void {
@@ -32,12 +35,14 @@ export class BookDetailsComponent implements OnInit {
     this.bookService.getBook(id).subscribe((book) => (this.book = book));
   }
 
-  addToCart(book: Book) {
-    this.cartService.addToCart(book);
+  handleAddToCart() {
+    this.cartService.addToCart(this.book).subscribe(() => {
+      this.msgService.sendMsg(this.book);
+    });
   }
 
-  toggleCartDialog(book: Book) {
-    this.addToCart(book);
+  toggleCartDialog() {
+    this.handleAddToCart();
     this.dialog.open(DialogBoxComponent, {
       data: { toCart: 'Go to Cart', continueShopping: 'Continue shopping' },
     });

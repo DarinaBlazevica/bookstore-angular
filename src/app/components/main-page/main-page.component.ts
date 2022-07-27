@@ -7,7 +7,7 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { BookService } from 'src/app/services/book.service';
-import { Book } from 'src/app/books';
+import { Book } from 'src/app/interface/books';
 
 @Component({
   selector: 'app-main-page',

@@ -1,43 +1,58 @@
 import { Injectable } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { Route, Router } from '@angular/router';
-import { Book } from 'src/app/books';
-import { DialogBoxComponent } from '../components/dialog-box/dialog-box.component';
+import { Observable, map, filter } from 'rxjs';
+import { CartItem } from 'src/app/interface/cartItems';
+import { Book } from '../interface/books';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  
-  public items: Book[] = [];
+  public items = [];
 
-  constructor() {}
+  public cartUrl = 'api/cartItems';
 
-  addToCart(book: Book) {
-    let existsInCart = false;
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
 
-    for (let i in this.items) {
-      if (this.items[i].id === book.id) {
-        this.items[i].qty += book.qty;
-        existsInCart = true;
-      }
-    }
+  constructor(private httpClient: HttpClient) {}
 
-    if (!existsInCart) {
-      this.items.push(book);
-    }
+  getItems(): Observable<CartItem[]> {
+    return this.httpClient.get<CartItem[]>(this.cartUrl).pipe(
+      map((result: any[]) => {
+        let cartItems: CartItem[] = [];
+
+        for (let item of result) {
+          let existsInCart = false;
+
+          for (let i in cartItems) {
+            if (cartItems[i].id === item.book.id) {
+              cartItems[i].qty += item.book.qty;
+              existsInCart = true;
+            }
+          }
+
+          if (!existsInCart) {
+            cartItems.push(new CartItem(item.book));
+          }
+        }
+        return cartItems;
+      })
+    );
   }
 
-  removeItem(index: number) {
-    this.items.splice(index, 1);
+  addToCart(book: Book): Observable<any> {
+    return this.httpClient.post(this.cartUrl, { book }, this.httpOptions);
   }
 
-  getItems() {
-    return this.items;
+  removeItem(index: number): Observable<CartItem> {
+    const url = `${this.cartUrl}/${index}`;
+    return this.httpClient.delete<CartItem>(url, this.httpOptions);
   }
 
-  clearCart() {
-    this.items = [];
-    return this.items;
+  clearCart(): Observable<CartItem[]> {
+    const url = `${this.cartUrl}`;
+    return this.httpClient.delete<CartItem[]>(url, this.httpOptions);
   }
 }

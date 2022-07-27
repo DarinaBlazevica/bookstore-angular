@@ -1,4 +1,4 @@
-import { Book } from '../books';
+import { Book } from '../interface/books';
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -13,6 +13,7 @@ export class BookService {
   constructor(private httpClient: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
+    console.log(this.httpClient);
     return this.httpClient.get<Book[]>(this.booksUrl);
   }
 
