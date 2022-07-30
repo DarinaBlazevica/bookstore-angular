@@ -7,7 +7,6 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-
   public items = this.cartService.getItems();
 
   public totalPrice!: number;
@@ -19,7 +18,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.getItems();
   }
-  
+
   getItems(): void {
     this.items = this.cartService.getItems();
   }
@@ -33,7 +32,6 @@ export class CartComponent implements OnInit {
     this.items.forEach((element) => {
       totalElementPrice += element.price * element.qty;
     });
-
     return (this.totalPrice = totalElementPrice);
   }
 }

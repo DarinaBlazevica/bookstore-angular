@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
 })
-export class CheckoutComponent  {
+export class CheckoutComponent {
   @Input() showCheckout!: boolean;
   @Output() showCheckoutChange = new EventEmitter<boolean>();
 

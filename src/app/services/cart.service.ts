@@ -1,17 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { Route, Router } from '@angular/router';
 import { Book } from 'src/app/books';
-import { DialogBoxComponent } from '../components/dialog-box/dialog-box.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  
   public items: Book[] = [];
 
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
   addToCart(book: Book) {
     let existsInCart = false;
@@ -37,7 +34,6 @@ export class CartService {
   }
 
   clearCart() {
-    this.items = [];
-    return this.items;
+    return (this.items = []);
   }
 }

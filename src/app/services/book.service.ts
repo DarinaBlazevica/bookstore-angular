@@ -1,18 +1,18 @@
 import { Book } from '../books';
 import { Injectable } from '@angular/core';
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookService {
-
   private booksUrl = 'api/books';
 
   constructor(private httpClient: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
+    console.log(this.httpClient);
     return this.httpClient.get<Book[]>(this.booksUrl);
   }
 
@@ -21,4 +21,3 @@ export class BookService {
     return this.httpClient.get<Book>(url);
   }
 }
-
