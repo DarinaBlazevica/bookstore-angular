@@ -10,7 +10,7 @@ import { CartService } from './cart.service';
 export class CheckoutService {
   public orderItems = this.cartService.getItems();
 
-  public orderUrl = 'http://localhost:3000/orders';
+  public orderUrl = 'api/order';
   
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
