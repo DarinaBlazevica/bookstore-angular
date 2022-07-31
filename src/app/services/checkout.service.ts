@@ -10,7 +10,8 @@ import { CartService } from './cart.service';
 export class CheckoutService {
   public orderItems = this.cartService.getItems();
 
-  public orderUrl = 'api/order';
+  public orderUrl = 'http://localhost:3000/order';
+  
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
@@ -34,6 +35,6 @@ export class CheckoutService {
 
   fillOrder(): Observable<any> {
     const order = this.orderItems;
-    return this.httpClient.post(this.orderUrl, { order });
+    return this.httpClient.post(this.orderUrl, { order }, this.httpOptions);
   }
 }
