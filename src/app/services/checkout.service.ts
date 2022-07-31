@@ -10,7 +10,7 @@ import { CartService } from './cart.service';
 export class CheckoutService {
   public orderItems = this.cartService.getItems();
 
-  public orderUrl = 'http://localhost:3000/order';
+  public orderUrl = 'http://localhost:3000/orders';
   
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -18,8 +18,9 @@ export class CheckoutService {
 
   constructor(
     private httpClient: HttpClient,
-    private cartService: CartService
+    private cartService: CartService,
   ) {}
+  
 
   getOrder(): Observable<OrderItem[]> {
     return this.httpClient.get<OrderItem[]>(this.orderUrl).pipe(
@@ -35,6 +36,6 @@ export class CheckoutService {
 
   fillOrder(): Observable<any> {
     const order = this.orderItems;
-    return this.httpClient.post(this.orderUrl, { order }, this.httpOptions);
+    return this.httpClient.post(this.orderUrl, { order  }, this.httpOptions);
   }
 }
