@@ -3,7 +3,6 @@ import {
   ElementRef,
   OnInit,
   QueryList,
-  ViewChild,
   ViewChildren,
 } from '@angular/core';
 import { BookService } from 'src/app/services/book.service';

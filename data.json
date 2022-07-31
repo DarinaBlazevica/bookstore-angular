@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Anna Karenina",
+      "price": 33,
+      "book_cover": "assets/books_img/tolstoy.jpg",
+      "description": "A complex novel in eight parts, with more than a dozen major characters, Anna Karenina is spread over more than 800 pages (depending on the translation and publisher), typically contained in two volumes. It deals with themes of betrayal, faith, family, marriage, Imperial Russian society, desire, and rural vs. city life. The story centers on an extramarital affair between Anna and dashing cavalry officer Count Alexei Kirillovich Vronsky that scandalizes the social circles of Saint Petersburg and forces the young lovers to flee to Italy in a search for happiness, but after they return to Russia, their lives further unravel.",
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "title": "Crime and Punishment",
+      "price": 25,
+      "book_cover": "assets/books_img/dostoyevsky.jpg",
+      "description": "Crime and Punishment follows the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who plans to kill an unscrupulous pawnbroker, an old woman who stores money and valuable objects in her flat. He theorises that with the money he could liberate himself from poverty and go on to perform great deeds, and seeks to convince himself that certain crimes are justifiable if they are committed in order to remove obstacles to the higher goals of 'extraordinary' men. Once the deed is done, however, he finds himself racked with confusion, paranoia, and disgust. His theoretical justifications lose all their power as he struggles with guilt and horror and confronts both the internal and external consequences of his deed.",
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "title": "The Master and Margarita",
+      "price": 21,
+      "book_cover": "assets/books_img/bulgakov.jpg",
+      "description": "The story concerns a visit by the devil to the officially atheistic Soviet Union. The Master and Margarita combines supernatural elements with satirical dark comedy and Christian philosophy, defying categorization within a single genre. Many critics consider it to be one of the best novels of the 20th century, as well as the foremost of Soviet satires",
+      "qty": 1
+    },
+    {
+      "id": 4,
+      "title": "Brave New World",
+      "price": 23,
+      "book_cover": "assets/books_img/huxley.jpg",
+      "description": "Brave New World is a dystopian social science fiction novel by English author Aldous Huxley, written in 1931 and published in 1932. Largely set in a futuristic World State, whose citizens are environmentally engineered into an intelligence-based social hierarchy, the novel anticipates huge scientific advancements in reproductive technology, sleep-learning, psychological manipulation and classical conditioning that are combined to make a dystopian society which is challenged by only a single individual: the story's protagonist. ",
+      "qty": 1
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "price": 19,
+      "book_cover": "assets/books_img/orwell.jpg",
+      "description": "The story takes place in an imagined future, the year 1984, when much of the world has fallen victim to perpetual war, omnipresent government surveillance, historical negationism, and propaganda. Great Britain, known as Airstrip One, has become a province of the totalitarian superstate Oceania, ruled by the Party, who employ the Thought Police to persecute individuality and independent thinking. Big Brother, the dictatorial leader of Oceania, enjoys an intense cult of personality, manufactured by the party's excessive brainwashing techniques. The protagonist, Winston Smith, is a diligent and skillful rank-and-file worker at the Ministry of Truth and Outer Party member who secretly hates the Party and dreams of rebellion. He expresses his dissent by writing in a diary and later enters into a forbidden relationship with his colleague Julia and starts to remember what life was like before the Party came to power.",
+      "qty": 1
+    },
+    {
+      "id": 6,
+      "title": "Time to Live and Time to Die",
+      "price": 25,
+      "book_cover": "assets/books_img/remarque.jpg",
+      "description": "In a German infantry unit retreating from Russia in the spring of 1944, Ernst Graeber's conscience is revolted by the execution of captured civilians. Given his first furlough for over two years, he returns to find his family home bombed and his parents gone. Calling at the house of the family doctor for information, the daughter Elizabeth tells him her father is in a concentration camp because of an unwise remark. Allied bombing continues by day and by night...",
+      "qty": 1
+    },
+    {
+      "id": 7,
+      "title": "The Picture of Dorian Gray",
+      "price": 19,
+      "book_cover": "assets/books_img/wilde.jpg",
+      "description": "The story revolves around a portrait of Dorian Gray painted by Basil Hallward, a friend of Dorian's and an artist infatuated with Dorian's beauty. Through Basil, Dorian meets Lord Henry Wotton and is soon enthralled by the aristocrat's hedonistic worldview: that beauty and sensual fulfillment are the only things worth pursuing in life. Newly understanding that his beauty will fade, Dorian expresses the desire to sell his soul, to ensure that the picture, rather than he, will age and fade. The wish is granted, and Dorian pursues a libertine life of varied amoral experiences while staying young and beautiful; all the while, his portrait ages and visually records every one of Dorian's sins",
+      "qty": 1
+    },
+    {
+      "id": 8,
+      "title": "War and Peace",
+      "price": 21,
+      "book_cover": "assets/books_img/tolstoy_wandp.jpg",
+      "description": "War and Peace is a literary work mixed with chapters on history and philosophy by the Russian author Leo Tolstoy. It was first published serially, then published in its entirety in 1869. It is regarded as one of Tolstoy's finest literary achievements and remains an internationally praised classic of world literature.The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families. Portions of an earlier version, titled The Year 1805, were serialized in The Russian Messenger from 1865 to 1867 before the novel was published in its entirety in 1869.",
+      "qty": 1
+    },
+    {
+      "id": 9,
+      "title": "We",
+      "price": 22,
+      "book_cover": "assets/books_img/zamyatin.jpg",
+      "description": "We is set in the future. D-503, a spacecraft engineer, lives in the One State, an urban nation constructed almost entirely of glass, which assists mass surveillance. The structure of the state is Panopticon-like, and life is scientifically managed F. W. Taylor-like. People march in step with each other and are uniformed. There is no way of referring to people except by their given numbers. The society is run strictly by logic or reason as the primary justification for the laws or the construct of the society. The individual's behaviour is based on logic by way of formulae and equations outlined by the One State.",
+      "qty": 1
+    }
+  ],
+  "orders": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
