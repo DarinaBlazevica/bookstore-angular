@@ -22,7 +22,7 @@ const routes: Routes = [
       loadChildren: () => import('./components/cart/cart.module').then((m) => m.CartModule),
     },
  
-    { path: '', redirectTo: '/main', pathMatch: 'full' },
+    { path: '', redirectTo: 'main', pathMatch: 'full' },
 ];
 
 @NgModule({
