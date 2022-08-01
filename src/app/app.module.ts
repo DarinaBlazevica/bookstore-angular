@@ -7,8 +7,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,9 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
 
   imports: [
-    ReactiveFormsModule,
-    FormsModule,
-    MatDialogModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
