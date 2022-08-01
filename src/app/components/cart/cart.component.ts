@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   public closeButton!: string
 
   constructor(private cartService: CartService) {
-    this.closeButton ='assets/svg/xmark-solid.svg'
+    
   }
 
   ngOnInit(): void {
