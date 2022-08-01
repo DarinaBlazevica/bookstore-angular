@@ -9,11 +9,16 @@ import { Router } from '@angular/router';
 })
 export class DialogBoxComponent {
   
+  public closeButtonIcon!: string;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: { toCart: string; continueShopping: string },
     private router: Router,
     public dialogRef: MatDialogRef<DialogBoxComponent>,
-  ) {}
+  ) {
+    
+    this.closeButtonIcon ='assets/svg/xmark-solid.svg'
+  }
 
   goToCart() {
       this.router.navigate(['cart']);

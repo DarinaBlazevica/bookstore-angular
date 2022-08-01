@@ -12,8 +12,11 @@ export class CartComponent implements OnInit {
   public totalPrice!: number;
   public quantity!: number;
   public showCheckoutForm = false;
+  public closeButton!: string
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) {
+    this.closeButton ='assets/svg/xmark-solid.svg'
+  }
 
   ngOnInit(): void {
     this.getItems();
