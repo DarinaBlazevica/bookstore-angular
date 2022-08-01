@@ -87,7 +87,58 @@
       "qty": 1
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "order": [
+        {
+          "id": 6,
+          "title": "Time to Live and Time to Die",
+          "price": 25,
+          "book_cover": "assets/books_img/remarque.jpg",
+          "description": "In a German infantry unit retreating from Russia in the spring of 1944, Ernst Graeber's conscience is revolted by the execution of captured civilians. Given his first furlough for over two years, he returns to find his family home bombed and his parents gone. Calling at the house of the family doctor for information, the daughter Elizabeth tells him her father is in a concentration camp because of an unwise remark. Allied bombing continues by day and by night...",
+          "qty": 3
+        },
+        {
+          "id": 2,
+          "title": "Crime and Punishment",
+          "price": 25,
+          "book_cover": "assets/books_img/dostoyevsky.jpg",
+          "description": "Crime and Punishment follows the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who plans to kill an unscrupulous pawnbroker, an old woman who stores money and valuable objects in her flat. He theorises that with the money he could liberate himself from poverty and go on to perform great deeds, and seeks to convince himself that certain crimes are justifiable if they are committed in order to remove obstacles to the higher goals of 'extraordinary' men. Once the deed is done, however, he finds himself racked with confusion, paranoia, and disgust. His theoretical justifications lose all their power as he struggles with guilt and horror and confronts both the internal and external consequences of his deed.",
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "title": "Brave New World",
+          "price": 23,
+          "book_cover": "assets/books_img/huxley.jpg",
+          "description": "Brave New World is a dystopian social science fiction novel by English author Aldous Huxley, written in 1931 and published in 1932. Largely set in a futuristic World State, whose citizens are environmentally engineered into an intelligence-based social hierarchy, the novel anticipates huge scientific advancements in reproductive technology, sleep-learning, psychological manipulation and classical conditioning that are combined to make a dystopian society which is challenged by only a single individual: the story's protagonist. ",
+          "qty": 2
+        }
+      ],
+      "userInfo": [
+        "Name Surname",
+        "name.surname@gmail.com"
+      ],
+      "id": 1
+    },
+    {
+      "order": [
+        {
+          "id": 2,
+          "title": "Crime and Punishment",
+          "price": 25,
+          "book_cover": "assets/books_img/dostoyevsky.jpg",
+          "description": "Crime and Punishment follows the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who plans to kill an unscrupulous pawnbroker, an old woman who stores money and valuable objects in her flat. He theorises that with the money he could liberate himself from poverty and go on to perform great deeds, and seeks to convince himself that certain crimes are justifiable if they are committed in order to remove obstacles to the higher goals of 'extraordinary' men. Once the deed is done, however, he finds himself racked with confusion, paranoia, and disgust. His theoretical justifications lose all their power as he struggles with guilt and horror and confronts both the internal and external consequences of his deed.",
+          "qty": 1
+        }
+      ],
+      "userInfo": [
+        "Crime and Punishment",
+        "crime.punishment@gmail.com"
+      ],
+      "id": 2
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

@@ -4,10 +4,11 @@ import { AppComponent } from './app.component';
 import { TopnavigationComponent } from './components/topnavigation/topnavigation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/in-memory-data.service';
+// import { InMemoryDataService } from './services/in-memory-data.service';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,12 +18,15 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
 
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ), 
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ), 
     BrowserAnimationsModule,
   ],
   bootstrap: [AppComponent]

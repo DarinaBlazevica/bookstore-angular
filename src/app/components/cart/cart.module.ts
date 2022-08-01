@@ -4,7 +4,6 @@ import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './cart.component'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from '../checkout/checkout.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { OrderDialogboxComponent } from '../order-dialogbox/order-dialogbox.component';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { OrderDialogboxComponent } from '../order-dialogbox/order-dialogbox.comp
       FormsModule,
       CommonModule,
       CartRoutingModule,
-      MatDialogModule, 
     ],
     declarations: [ CartComponent, CheckoutComponent, OrderDialogboxComponent ]
   })
