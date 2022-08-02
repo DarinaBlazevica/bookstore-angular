@@ -1,0 +1,15 @@
+<div class="book_details__container" *ngIf="book">
+    <h1 class="title">{{book.title}}</h1>
+    <div class="book_details__image-container">
+        <img src="{{ book.book_cover }}" alt="book">
+    </div>
+    <p class="book_details__description">{{book.description}}</p>
+    <div class="book_details__add_to_cart">
+        <div class="book_details__book_amount">
+            <label for="book">Amount: </label>
+            <input type ="number" id="bookAmount" min ="1" max="10" [(ngModel)]="book.qty" onkeydown="return false"/>
+        </div>
+        <p>{{ book.price | currency }}</p>
+    </div>
+    <button class="book_details__addToCartButton" type="button" (click)="toggleCartDialog(book)">Add to Cart</button>
+</div>

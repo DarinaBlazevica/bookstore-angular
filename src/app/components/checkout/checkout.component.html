@@ -1,0 +1,33 @@
+<div class="checkout_container" *ngIf="showCheckout">
+    <form [formGroup]="checkoutOrderForm">
+        <div class="checkout_container__user_information">
+            <label class="checkout_container__user_information--email">email:</label>
+            <input type="email" name="user_email" formControlName="user_email">
+        </div>
+        <div class="error"
+            *ngIf="userData['user_email'].invalid && (userData['user_email'].dirty || userData['user_email'].touched)">
+            <div *ngIf="userData['user_email'].errors?.['required']">Email required</div>
+            <div *ngIf="userData['user_email'].errors?.['pattern']">Provide valid email address</div>
+        </div>
+        <div class="checkout_container__user_information">
+            <label class="checkout_container__user_information--confirm_email">confirm email:</label>
+            <input type="email" name="confirm_email" formControlName="confirm_email">
+        </div>
+        <div class="error"
+            *ngIf="userData['confirm_email'].invalid && (userData['confirm_email'].dirty || userData['confirm_email'].touched)">
+            <div *ngIf="userData['confirm_email'].errors?.['required']">Confirmation required</div>
+            <div *ngIf="userData['confirm_email'].errors?.['EmailMatch']">Provide valid email address
+            </div>
+        </div>
+        <div class="checkout_container__user_information">
+            <label class="checkout_container__user_information--name">name/surname:</label>
+            <input type="text" formControlName="name">
+        </div>
+        <div class="error" *ngIf="userData['name'].invalid && ((userData['name'].dirty || userData['name'].touched))">
+            <div *ngIf="userData['name'].errors?.['required']">Name is required</div>
+            <div *ngIf="userData['name'].errors?.['pattern']">Name is invalid</div>
+        </div>
+    </form>
+    <button [disabled]="userData['name'].invalid || userData['confirm_email'].invalid || userData['user_email'].invalid"
+        class="checkout_container__orderButton" (click)="toggleOrderDialog()">Order</button>
+</div>
