@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
   
-  public booksUrl = 'api/books';
+  public booksUrl = 'http://localhost:3000/books';
 
   constructor(private httpClient: HttpClient) {}
 

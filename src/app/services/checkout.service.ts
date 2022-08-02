@@ -20,7 +20,7 @@ export class CheckoutService {
   public checkoutOrderForm!: FormGroup;
   public orderItems = this.cartService.getItems();
 
-  public orderUrl = 'api/order';
+  public orderUrl = 'http://localhost:3000/orders';
   
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
