@@ -1,6 +1,6 @@
 <div class="cart-container">
     <div *ngIf="!items|| items.length === 0">
-        <div class="cart_content__empty">...Cart is Empty...</div>
+        <div class="cart_content__empty">{{emptyCartText}}</div>
     </div>
 
     <div *ngIf="items && items.length > 0">
@@ -22,8 +22,8 @@
         </div>
         <div class="total_cost__container">
             <div class="total_cost">
-                <h1>Total cost: {{ calculateTotalPrice() | currency }}</h1>
-                <button type="button" (click)="showCheckoutForm = !showCheckoutForm">Checkout</button>
+                <h1>{{totalCost}} {{ calculateTotalPrice() | currency }}</h1>
+                <button type="button" (click)="showCheckoutForm = !showCheckoutForm">{{checkoutText}}</button>
                 <app-checkout [(showCheckout)] ="showCheckoutForm"></app-checkout>
             </div>
         </div>

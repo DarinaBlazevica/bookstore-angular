@@ -19,7 +19,7 @@ export class TopnavigationComponent {
     this.bookstore_name ='Bookstore'
     this.cart = 'assets/svg/shopping-cart.svg'
     this.hamburger='assets/svg/hamburger_menu.svg'
-    this.backButton ='assets/svg/caret-left-solid.svg'
+    this.backButton ='assets/svg/arrow-left-solid.svg'
   }
 
   goBack(): void {

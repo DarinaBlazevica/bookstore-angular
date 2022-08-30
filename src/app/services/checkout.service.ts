@@ -47,7 +47,7 @@ export class CheckoutService {
         ]),
       },
       {
-        validators: this.EmailMatch('user_email', 'confirm_email'),
+        validators: this.emailMatch('user_email', 'confirm_email'),
       }
     );
   }
@@ -70,7 +70,7 @@ export class CheckoutService {
     return this.httpClient.post(this.orderUrl, { order, userInfo }, this.httpOptions);
   }
 
-  EmailMatch(controlName: string, matchingControlName: string) {
+  emailMatch(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
@@ -95,7 +95,11 @@ export class CheckoutService {
       data: {message: "Thank you for your order!" , homepage: "Homepage"} })
   }
 
-  getForm() {
+  getForm(): FormGroup {
     return this.checkoutOrderForm
+  }
+
+  resetForm(): void {
+    return this.checkoutOrderForm.reset();
   }
 }
