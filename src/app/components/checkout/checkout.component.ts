@@ -13,12 +13,14 @@ export class CheckoutComponent {
   @Output() showCheckoutChange = new EventEmitter<boolean>();
 
   public checkoutOrderForm!: FormGroup;
+  public orderText!: string;
 
   constructor(
     public dialog: MatDialog,
     private checkoutService: CheckoutService
   ) {
     this.checkoutOrderForm = this.checkoutService.getForm();
+    this.orderText = 'Order'
   }
 
   get userData() {

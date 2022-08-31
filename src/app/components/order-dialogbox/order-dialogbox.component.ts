@@ -41,5 +41,6 @@ export class OrderDialogboxComponent implements OnInit {
     this.router.navigate(['main']);
     this.dialogRef.close();
     this.cartService.clearCart();
+    this.checkoutService.resetForm();
   }
 }

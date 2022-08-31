@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Book } from 'src/app/books';
 
@@ -8,9 +7,9 @@ import { Book } from 'src/app/books';
 export class CartService {
   public items: Book[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor() {}
 
-  addToCart(book: Book) {
+  addToCart(book: Book): Book[] {
     let existsInCart = false;
 
     for (let i in this.items) {
@@ -23,17 +22,19 @@ export class CartService {
     if (!existsInCart) {
       this.items.push(book);
     }
-  }
-
-  removeItem(index: number) {
-    this.items.splice(index, 1);
-  }
-
-  getItems() {
     return this.items;
   }
 
-  clearCart() {
+  removeItem(index: number): Book[] {
+    this.items.splice(index, 1);
+    return this.items;
+  }
+
+  getItems(): Book[] {
+    return this.items;
+  }
+
+  clearCart(): Book[] {
     return (this.items = []);
   }
 }

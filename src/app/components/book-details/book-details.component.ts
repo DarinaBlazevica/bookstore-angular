@@ -15,13 +15,18 @@ export class BookDetailsComponent implements OnInit {
   book: Book | undefined;
 
   public items = this.cartService.getItems();
+  public amountText!: string;
+  public addToCartText!: string;
 
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService,
     private cartService: CartService,
     public dialog: MatDialog
-  ) {}
+  ) {
+    this.addToCartText = 'Add to Cart';
+    this.amountText='Amount: '
+  }
 
   ngOnInit(): void {
     this.getBook();

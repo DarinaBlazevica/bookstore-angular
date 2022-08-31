@@ -29,5 +29,5 @@
         </div>
     </form>
     <button [disabled]="userData['name'].invalid || userData['confirm_email'].invalid || userData['user_email'].invalid"
-        class="checkout_container__orderButton" (click)="toggleOrderDialog()">Order</button>
+        class="checkout_container__orderButton" (click)="toggleOrderDialog()">{{orderText}}</button>
 </div>

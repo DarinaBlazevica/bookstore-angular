@@ -12,10 +12,16 @@ export class CartComponent implements OnInit {
   public totalPrice!: number;
   public quantity!: number;
   public showCheckoutForm = false;
-  public closeButton!: string
+  public closeButton!: string;
+  public totalCost!: string;
+  public checkoutText!: string;
+  public emptyCartText!: string;
 
   constructor(private cartService: CartService) {
     this.closeButton ='assets/svg/xmark-solid.svg'
+    this.totalCost = 'Total cost:'
+    this.checkoutText = 'Checkout'
+    this.emptyCartText = '...Cart is Empty...'
   }
 
   ngOnInit(): void {

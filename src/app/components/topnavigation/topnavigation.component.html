@@ -7,7 +7,7 @@
     <div class="top-navigation__name">{{ bookstore_name | uppercase }}</div>
   </div>
   <div class="top-navigation__cart-block">
-    <img class="top-navigation__cart" routerLink="/cart" src={{cart}} alt="shopping cart" />
+    <img class="top-navigation__cart" *ngIf="rla.isActive === false" routerLink="/cart" src={{cart}} alt="shopping cart" />
     <img class="top-navigation__hamburger" src={{hamburger}} alt="hamburger" />
   </div>
 </nav>
