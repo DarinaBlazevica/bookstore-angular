@@ -47,7 +47,7 @@ describe('TopnavigationComponent ', () => {
   });
 
   it(`should have as Back Button Icon`, () => {
-    expect(component.backButton).toContain('caret-left-solid.svg');
+    expect(component.backButton).toContain('arrow-left-solid.svg');
   });
 
   it(`should go back`, () => { 
