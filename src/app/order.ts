@@ -8,7 +8,6 @@ export class OrderItem {
     description: string;
     qty: number;
 
-
     constructor(book: Book) {
         this.id = book.id
         this.title = book.title

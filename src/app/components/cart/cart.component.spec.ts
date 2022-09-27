@@ -44,11 +44,9 @@ describe('CartComponent ', () => {
         imports: [RouterTestingModule],
         declarations: [CartComponent],
       }).compileComponents();
-      
     });
   
     beforeEach(() => {
-    
       fixture = TestBed.createComponent(CartComponent);
       cartService = TestBed.inject(CartService);
       component = fixture.componentInstance;
